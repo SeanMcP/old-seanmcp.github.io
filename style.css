@@ -6,11 +6,22 @@ body {
 h1, h3 {
   text-align: center;
 }
+a {
+  color: #00BAA1;
+  text-decoration: none;
+  border-bottom: 1px dashed #00BAA1;
+}
+a:hover {
+  border-bottom: 1px solid #00BAA1;
+}
+a:visited {
+  color: #999;
+}
 #wrapper {
   margin: 100px auto;
-  width: 50%;
-  padding: 20px;
-  color: #333;
+  width: 40%;
+  padding: 20px 40px;
+  color: #666;
   background-color: white;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
