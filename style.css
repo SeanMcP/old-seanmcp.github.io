@@ -16,6 +16,7 @@ a:hover {
 }
 a:visited {
   color: #999;
+  border-bottom: 1px dotted #999;
 }
 #wrapper {
   margin: 100px auto;
