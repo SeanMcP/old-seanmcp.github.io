@@ -1,0 +1,19 @@
+body {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  line-height: 1.6em;
+  background: linear-gradient(#002D41, #203E58);
+}
+h1, h3 {
+  text-align: center;
+}
+#wrapper {
+  margin: 100px auto;
+  width: 50%;
+  padding: 20px;
+  color: #333;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+.aligncenter {
+  text-align: center;
+}
