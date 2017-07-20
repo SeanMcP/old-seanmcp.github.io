@@ -2,9 +2,6 @@ body {
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
   line-height: 1.4em;
   background-color: #002D41;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 h1 {
   font-weight: 700;
@@ -30,7 +27,7 @@ a:hover {
 #wrapper {
   width: 520px;
   padding: 20px 30px;
-  margin: 40px auto;
+  margin: 40px auto 20px;
   color: #666;
   background-color: white;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
