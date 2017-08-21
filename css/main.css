@@ -1,10 +1,6 @@
 body {
-  background: url('borealis-min.jpg') center top no-repeat;
-  background-color: #002D41;
-  background-attachment: fixed;
-  background-size: cover;
+  background: #424242;
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
-  height: 100vh;
   line-height: 1.4em;
   margin: 0;
   width: 100%;
@@ -14,9 +10,9 @@ h1 {
   font-weight: 700;
 }
 h2 {
-  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-  margin-bottom: 30px;
-  padding-bottom: 10px;
+  border-bottom: 1px solid #999;
+  margin: 10px 0 0;
+  padding: 0 0 10px;
   text-align: right;
 }
 h3 {
@@ -24,47 +20,65 @@ h3 {
   font-size: 1.25em;
 }
 a {
-  color: #00BAA1;
+  color: #00C853;
   text-decoration: none;
-  border-bottom: 1px dashed #00BAA1;
 }
-a:hover {
-  border-bottom: 1px solid #00BAA1;
+a:hover, a:active {
+  border-bottom: 1px dashed #00C853;
 }
 main {
   background: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  color: #666;
+  color: #616161;
   display: flex;
   flex-flow: column wrap;
-  margin: 100px auto 0;
-  max-width: 600px;
+  margin: 0 auto;
   padding: 0;
   width: 100%;
 }
 header {
   align-items: center;
-  background: #333;
+  background: linear-gradient(#2E7D32, #388E3C);
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  padding: 30px 40px;
+  padding: 100px 40px 40px;
 }
 header h1, header h3 {
-  color: #ddd;
+  color: white;
   margin: 0;
 }
 .intro {
   margin-top: 20px;
 }
 article {
-  margin: 0 40px;
+  margin: 0 auto;
+  max-width: 720px;
+  width: 100%;
+}
+article > * {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+li ul {
+  font-size: 0.9em;
+  line-height: 175%;
+  margin-bottom: 10px;
+}
+li li {
+  margin-top: 5px;
 }
 footer {
-  background: #333;
+  background: #424242;
   color: #999;
   margin-top: 20px;
   text-align: center;
+}
+footer a {
+  border: none;
+  color: #999;
+}
+footer a:hover {
+  border-bottom: 1px dotted #999;
 }
 
 /* Begin breakpoint for mobile devices */
