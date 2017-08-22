@@ -43,6 +43,19 @@ header {
   justify-content: space-between;
   padding: 100px 40px 40px;
 }
+nav {
+  flex: 1 50%;
+}
+nav ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  list-style: none;
+  width: 50%;
+}
+nav li {
+  padding: 10px 40px;
+}
 header h1, header h3 {
   color: white;
   margin: 0;
