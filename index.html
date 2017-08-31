@@ -3,33 +3,34 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     <title>Sean McPherson | Web developer and former educator</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,700" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="icon" href="./img/favicon.png">
   </head>
   <body>
-    <main class="siteContainer">
+    <main id="home" class="siteContainer">
       <header>
-        <section>
+        <!-- <section> -->
           <h1>Sean McPherson</h1>
-          <h3>Atlanta Web Developer</h3>
-        </section>
-        <nav>
+          <h3>// Atlanta Web Developer</h3>
+        <!-- </section> -->
+        <!-- <nav>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Experience</a></li>
-            <li><a href="#">Education</a></li>
-          </ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+          </ul> -->
       </header>
-      <article class="intro">
+      <article id="intro">
+        <h2>Introduction</h2>
         <p>My name is Sean McPherson, and I am a full-stack web developer in Atlanta, GA.</p>
         <p>As a former web designer and educator, my curious nature, passion for programming, and love of learning drive me to create software that makes an impact on those around me.</p>
         <p>When I'm not coding, I like being married to my wife, playing with my tripod, watching and playing soccer, and solving problems.</p>
         <p>You can check out my work on <a href="https://github.com/seanmcp" target="_blank">Github</a> and read my <a href="http://blog.seanmcp.com" target="_blank">blog</a>.</p>
       </article>
-      <article class="portfolio">
+      <article id="portfolio">
         <h2>Portfolio</h2>
         <h3>Optimized for web and mobile</h3>
         <ul>
@@ -47,9 +48,6 @@
               <li>JavaScript with HTML &amp; CSS</li>
             </ul>
           </li>
-        </ul>
-        <h3>Google Chrome (desktop and mobile) only</h3>
-        <ul>
           <li>
             <a href="http://grouping.seanmcp.com">Easy Grouping</a>
             <ul>
@@ -57,6 +55,9 @@
               <li>JavaScript with HTML &amp; CSS</li>
             </ul>
           </li>
+        </ul>
+        <h3>Google Chrome (desktop and mobile) only</h3>
+        <ul>
           <li>
             <a href="http://counter.seanmcp.com">Simple Counter</a>
             <ul>
@@ -85,17 +86,19 @@
         </ul>
         <p>View the rest of my projects on <a href="https://github.com/SeanMcP">GitHub</a>.</p>
       </article>
-      <article class="skills">
+      <article id="skills">
         <h2>Special Skills</h2>
         <ul>
           <li>JavaScript</li>
           <li>Node.js</li>
+          <li>SQL (Sequelize)</li>
+          <li>NoSQL (MongoDB and Mongoose)</li>
           <li>HTML &amp; CSS</li>
           <li>Responsive design</li>
           <li>Git and GitHub</li>
         </ul>
       </article>
-      <article class="experience">
+      <article id="experience">
         <h2>Relevant Experience</h2>
         <h3>The Iron Yard</h3>
         <p>The Iron Yard is a 12-week coding bootcamp specializing in highly focused, immersive training centered on language fluency, object-oriented programming, and project-based learning.</p>
@@ -114,7 +117,7 @@
           </li>
         </ul>
       </article>
-      <article class="education">
+      <article id="education">
         <h2>Education</h2>
         <h3>The Iron Yard - Atlanta</h3>
         <p>Full-stack Web Development, JavaScript</p>
@@ -125,5 +128,7 @@
         <p><a href="http://seanmcp.com">SeanMcP</a> | <a href="https://github.com/seanmcp">GitHub</a> | <a href="https://linkedin.com/in/seanmcp">LinkedIn</a> | <a href="mailto:sean@seanmcp.com">Email</a> | <a href="https://en.wikipedia.org/wiki/Soli_Deo_gloria">SDG</a></p>
       </footer>
     </main>
+    <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
   </body>
 </html>
