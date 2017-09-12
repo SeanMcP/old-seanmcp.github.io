@@ -309,6 +309,7 @@ article a:hover, article a:active {
   }
   article img {
     border-top-left-radius: 0;
+    border-bottom: 1px solid #EEEEEE;
     float: right;
     width: 50px;
   }
