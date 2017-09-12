@@ -1,22 +1,29 @@
-let windw = this;
+let menuButton = document.getElementById('menu')
+let mainNav = document.getElementsByTagName('nav')[0]
+let openMenu = document.getElementById('menuOpen')
+let closeMenu = document.getElementById('menuClose')
 
-$.fn.followTo = function (position) {
-    let $this = this;
-    let $window = $(windw);
+function toggleHide() {
+  mainNav.classList.toggle('mobile-hide')
+  openMenu.classList.toggle('menu-hide')
+  closeMenu.classList.toggle('menu-hide')
+}
 
-    $window.scroll(function(e){
-        if ($window.scrollTop() > pos) {
-            $this.css({
-                position: 'absolute',
-                top: pos
-            });
-        } else {
-            $this.css({
-                position: 'fixed',
-                top: 0
-            });
-        }
-    });
-};
+menuButton.addEventListener('click', toggleHide)
+mainNav.addEventListener('click', toggleHide)
 
-$('#f').followTo(250);
+// Scroll to anchors
+
+$(document).ready(function(){
+  $('a').on('click', function(event) {
+    if (this.hash !== '') {
+      event.preventDefault()
+      let hash = this.hash
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 600, function(){
+        window.location.hash = hash
+      })
+    }
+  })
+})
