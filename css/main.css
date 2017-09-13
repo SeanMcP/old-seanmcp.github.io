@@ -293,6 +293,7 @@ article a:hover, article a:active {
     display: flex;
     flex-flow: column;
     position: fixed;
+    left: 0;
     margin: 0;
     top: 50px;
     transition: all 0.3s ease-in-out;
