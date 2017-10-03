@@ -23,6 +23,7 @@ body {
   height: 100vh;
   justify-content: center;
   position: fixed;
+  transition: all 1.5s ease-in;
   width: 100vw;
   z-index: 100;
 }
@@ -102,6 +103,9 @@ body {
 }
 #splash li a:hover {
   opacity: 1;
+}
+.hide-splash {
+  margin-top: -150vh;
 }
 
 /********* HEADER *********/
