@@ -5,7 +5,7 @@ let closeMenu = document.getElementById('menuClose')
 let splashPage = document.getElementById('splash')
 let splashButton = document.getElementById('splashAction')
 
-function toggleHide() {
+toggleHide = () => {
   mainNav.classList.toggle('mobile-hide')
   openMenu.classList.toggle('menu-hide')
   closeMenu.classList.toggle('menu-hide')
@@ -30,7 +30,8 @@ $(document).ready(function(){
       $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 600, function(){
-        window.location.hash = hash
+        console.log('window.location.hash', window.location.hash);
+        window.location.hash = hash;
       })
     }
   })

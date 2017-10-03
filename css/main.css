@@ -381,7 +381,8 @@ article a:hover, article a:active {
 
 @media (max-width: 600px) {
   .mobile-hide {
-    display: none;
+    left: 100vw;
+    opacity: 0;
   }
   #mainContainer {
     flex-flow: column;
@@ -391,14 +392,17 @@ article a:hover, article a:active {
     background: rgba(33, 33, 33, 0.9);
     display: flex;
     flex-flow: column;
-    position: fixed;
     left: 0;
     margin: 0;
+    padding: 7.5px 0;
+    position: fixed;
     top: 50px;
     transition: all 0.3s ease-in-out;
     width: 100%;
   }
   nav a {
+    font-size: 1.5em;
+    font-weight: 300;
     margin: 5px 10px 0;
   }
   nav a:last-of-type {
