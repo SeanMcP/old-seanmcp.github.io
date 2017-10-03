@@ -15,6 +15,9 @@ menuButton.addEventListener('click', toggleHide)
 mainNav.addEventListener('click', toggleHide)
 splashButton.addEventListener('click', () => {
   splashPage.classList.add('hide-splash');
+  setTimeout(() => {
+    splashPage.remove()
+  }, 2000)
 })
 
 // Scroll to anchors
