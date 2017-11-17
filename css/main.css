@@ -10,6 +10,14 @@ body {
   color: #BDBDBD;
 }
 
+span.about {
+  border-bottom: 1px dotted #ddd;
+  transition: border 0.1s ease-in-out;
+}
+span.about:hover {
+  border-color: #999999;
+}
+
 /********* SPLASH *********/
 
 #splash {
