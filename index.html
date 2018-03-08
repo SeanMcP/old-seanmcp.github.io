@@ -2,202 +2,29 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
-    <title>Sean McPherson | Web developer and former educator</title>
+    <title>Sean McPherson | Software developer</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-    <link rel="stylesheet" href="./css/fa/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="icon" href="./img/favicon.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   </head>
-  <body id="top">
-    <div id="splash">
-      <div class="fade"></div>
-      <div class="box">
-        <h1>SEAN McP</h2>
-        <p>JavaScript developer <span class="reg">|</span> Problem solver <span class="desktop-only"><span class="reg">|</span> Ex-Pokemon Master</span></p>
-        <div id="splashAction" class="action desktop-only">Visit Site</div>
-        <ul>
-          <li><a target="_blank" href="https://github.com/seanmcp"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a></li>
-          <li><a target="_blank" href="https://linkedin.com/in/seanmcp"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-          <li><a target="_blank" href="https://medium.com/@seanmcp"><i class="fa fa-medium fa-lg" aria-hidden="true"></i></a></li>
-        </ul>
-      </div>
-      <div id="splashSwipe" class="swipe mobile-only"><span class="align-center"><i class="material-icons md-24">keyboard_arrow_right</i>Slide to view site</span></div>
-    </div>
-    <div id="home" class="siteContainer">
-      <a id="action" href="mailto:sean@seanmcp.com?subject=I saw your portfolio"><i class="material-icons md-24">mail_outline</i></a>
+  <body>
+    <!-- <div id="wrapper">
       <header>
-        <a href="#top" class="logo"><img src="./img/logo-whiteout.png" alt="Sean McPherson"></a>
-        <nav class="mobile-hide">
-          <a href="#intro">Intro</a>
-          <a href="#skills">Skills</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#experience">Experience</a>
-          <a href="#education">Education</a>
-          <a href="http://medium.com/@seanmcp" target="_blank">Blog<i class="material-icons md-18">open_in_new</i>
-          </a>
-        </nav>
-        <div id="menu" class="mobile-only">
-          <i id="menuOpen" class="material-icons">menu</i>
-          <i id="menuClose" class="material-icons menu-hide">close</i>
-        </div>
+        <h1>Sean McPherson</h1>
+        <ul></ul>
       </header>
-      <section id="mainContainer">
-        <aside>
-          <article>
-            <img src="./img/seanmcp-headshot.jpg" alt="Sean McPherson">
-            <h2>Sean McPherson</h2>
-            <p>I'm a <span class="about" title="I currently specialize in JavaScript with React and Node.js">web developer</span>, <span class="about" title="I taught for three years in Pennsylvania and Georgia, including one year at a juvenile detention center">former educator</span>, <span class="about" title="I was once finished 119th in a national Pokemon Trading Card tournament">ex-Pokemon Master</span>, <span class="about" title="I write about soccer for DirtySouthSoccer.com and NPSL.com">soccer super-fan</span>, and <span class="about" title="I'm open to suggestions: what should I learn next?">life-long learner</span>.</p>
-            <section id="socials">
-              <a target="_blank" href="https://github.com/seanmcp"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
-              <a target="_blank" href="https://linkedin.com/in/seanmcp"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
-              <a target="_blank" href="https://medium.com/@seanmcp"><i class="fa fa-medium fa-lg" aria-hidden="true"></i></a>
-            </section>
-          </article>
-        </aside>
-        <main>
-          <a id="alert" href="mailto:sean@seanmcp.com?subject=I saw your portfolio" class="">
-            <span>Available for work</span>
-            <i class="material-icons">announcement</i>
-          </a>
-          <article id="intro">
-            <h2>Introduction</h2>
-            <p>My name is Sean McPherson, and I am a full-stack web developer in Atlanta, GA.</p>
-            <p>As a web developer with a background in education and design, I endeavor to use programming to solve real problems that help people and make the world a better place.</p>
-            <p>When I'm not coding, I like being a husband, playing with my three-legged dog, watching and playing soccer, and solving problems.</p>
-          </article>
-          <article id="skills">
-            <h2>Special Skills</h2>
-            <section class="flex row-nowrap even">
-              <ul>
-                <li class="liTitle">The Fun Stuff</li>
-                <li>JavaScript</li>
-                <li>React with Redux</li>
-                <li>Node.js and Express</li>
-                <li>NoSQL (MongoDB)</li>
-                <li>SQL (PostgreSQL)</li>
-              </ul>
-              <ul>
-                <li class="liTitle">The Basics</li>
-                <li>HTML &amp; CSS</li>
-                <li>Responsive design</li>
-                <li>Git and GitHub</li>
-              </ul>
-            </section>
-          </article>
-          <article id="portfolio">
-            <h2>Portfolio</h2>
-            <h3>Full-stack: Node.js and Express</h3>
-            <ul>
-              <li>
-                <a href="https://github.com/FreeAgentOnline/FreeAgent">FreeAgent</a>
-                <ul>
-                  <li>A resource for professional track &amp; field athletes</li>
-                  <li>Search for meets, build a schedule, and track and display results on your profile</li>
-                  <li>React, Node.js, Express, and MongoDB</li>
-                </ul>
-              </li>
-              <li>
-                <a href="http://flipcards.seanmcp.com">Flipcards</a>
-                <ul>
-                  <li>Create, edit, and manage decks of flashcards</li>
-                  <li>Review your flashcards and score your performance</li>
-                  <li>Node.js, Express, Mustache, and PostgreSQL</li>
-                </ul>
-              </li>
-              <li>
-                <a href="http://gabber.seanmcp.com">Gabber</a>
-                <ul>
-                  <li>A Twitter-clone for sharing short messages with the world</li>
-                  <li>Create and manage public profile</li>
-                  <li>Node.js, Express, Mustache, and PostgreSQL</li>
-                </ul>
-              </li>
-              <li>
-                <a href="http://snippits.seanmcp.com">codeSnippits</a>
-                <ul>
-                  <li>A site for saving, editing, and sharing code snippets</li>
-                  <li>View public snippets and copy them to your account</li>
-                  <li>Node.js, Express, Mustache, and MongoDB</li>
-                </ul>
-              </li>
-            </ul>
-            <h3>Front-end: Pure JavaScript</h3>
-            <ul>
-              <li>
-                <a href="https://seanmcp.github.io/wk4-musicSearch/">QuickTunes</a>
-                <ul>
-                  <li>Listen to thirty seconds of your favorite song</li>
-                  <li>Apple's iTunes API</li>
-                  <li>JavaScript with HTML &amp; CSS</li>
-                </ul>
-              </li>
-              <li>
-                <a href="http://percentgrader.seanmcp.com">Percent Grader</a>
-                <ul>
-                  <li>Quickly generates a percent table for teachers to grade student assessments</li>
-                  <li>JavaScript with HTML &amp; CSS</li>
-                </ul>
-              </li>
-              <li>
-                <a href="http://fluency.seanmcp.com">Fluency Calculator</a>
-                <ul>
-                  <li>Quickly assess a patient's fluency (SLP app)</li>
-                  <li>JavaScript with HTML &amp; CSS</li>
-                </ul>
-              </li>
-              <li>
-                <a href="http://grouping.seanmcp.com">Easy Grouping</a>
-                <ul>
-                  <li>Group students based on number of groups or students per group</li>
-                  <li>JavaScript with HTML &amp; CSS</li>
-                </ul>
-              </li>
-            </ul>
-            <p>View the rest of my projects on <a href="https://github.com/SeanMcP">GitHub</a>.</p>
-          </article>
-          <article id="experience">
-            <h2>Relevant Experience</h2>
-            <h3>The Iron Yard<span> 2017</span></h3>
-            <p>The Iron Yard is a 12-week coding bootcamp specializing in highly focused, immersive training centered on language fluency, object-oriented programming, and project-based learning.</p>
-            <!-- <h3>Fifth-grade Teacher<span> 2016 - 17</span></h3>
-            <p>Gwinnett County Public Schools (Duluth, GA)</p>
-            <ul class="expDetails">
-              <li>Managed a classroom of over twenty diverse individuals while meeting strict deadlines</li>
-              <li>Collaborated twice weekly with fellow educators to assess practices and outcomes, collaboratively plan classroom lessons, and prepare educational materials
-              </li>
-            </ul> -->
-            <h3>Freelance<span> 2006 - Now</span></h3>
-            <p>Web design and development (PA > GA)</p>
-            <ul class="expDetails">
-              <li>Specialized in designing logos and web pages for individuals and small businesses</li>
-              <li>Implemented simple and complex content management systems like WordPress, Pulse CMS, and SiteCake</li>
-            </ul>
-            <h3>Learning Designer<span> 2009 - 10</span></h3>
-            <p>Pennsylvania State University (University Park, PA)</p>
-            <ul class="expDetails">
-              <li>Created and designed online courses using semantic HTML and CSS</li>
-              <li>Managed courses using Penn State's ANGEL online content management system</li>
-            </ul>
-            <h3>Project Manager<span> 2008 - 10</span></h3>
-            <p>Brambling Design (State College, PA)</p>
-            <ul class="expDetails">
-              <li>Designed logos and web pages for small- and medium-sized business</li>
-              <li>Managed projects on a small team of developers to ensure customer satisfaction</li>
-            </ul>
-          </article>
-          <article id="education">
-            <h2>Education</h2>
-            <h3>The Iron Yard - Atlanta<span> 2017</span></h3>
-            <p>Full-stack Web Development, JavaScript/React</p>
-            <h3>Edinboro University<span> 2014</span></h3>
-            <p>B.S. Middle-level Education</p>
-          </article>
-        </main>
-      </section>
-    </div>
+      <main>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </main>
+      <footer>
+        <ul></ul>
+      </footer>
+    </div> -->
     <script type="text/javascript" src="./js/main.js"></script>
   </body>
 </html>

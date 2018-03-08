@@ -1,0 +1,49 @@
+{
+	"header": {
+		"title": "Sean McP",
+		"tagList": [
+			"Software developer",
+			"Problem solver",
+			"Soccer fan"
+		]
+	},
+	"main": {
+		"content": [
+			"My name is Sean McPherson and I am a softward developer at TSYS Digital Innovations specializing in front-end UX/UI development with React and Redux.",
+      "In addition to coding, I enjoy spending time with my wife, baby boy, and three-legged dog; watching, playing, and writing about soccer; and table-top gaming."
+		]
+	},
+	"footer": {
+		"linkList": [{
+				"text": "Medium",
+				"url": "https://medium.com/@seanmcp",
+				"icon": "fab fa-medium"
+			},
+			{
+				"text": "GitHub",
+				"url": "https://github.com/seanmcp",
+				"icon": "fab fa-github"
+			},
+			{
+				"text": "Twitter",
+				"url": "https://twitter.com/mcpcodes",
+				"icon": "fab fa-twitter"
+			},
+			{
+				"text": "LinkedIn",
+				"url": "https://linkedin.com/in/seanmcp",
+				"icon": "fab fa-linkedin"
+			},
+			{
+				"text": "Resume",
+				"url": "https://github.com/seanmcp/resume",
+				"icon": "fas fa-briefcase"
+			},
+			{
+				"text": "Email",
+				"url": "mailto:sean@seanmcp.com",
+				"icon": "fas fa-paper-plane"
+			}
+		]
+	}
+}
