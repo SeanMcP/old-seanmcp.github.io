@@ -1,71 +1,120 @@
-let menuButton = document.getElementById('menu')
-let mainNav = document.getElementsByTagName('nav')[0]
-let openMenu = document.getElementById('menuOpen')
-let closeMenu = document.getElementById('menuClose')
-let splashPage = document.getElementById('splash')
-let splashButton = document.getElementById('splashAction')
+$.getScript('./js/data.json', function(data, textStatus, jqxhr) {
+  // console.log( Data ); // Data returned
+  // console.log( textStatus ); // Success
+  // console.log( jqxhr.status ); // 200
+  // console.log( "Load was performed." );
+  // const data = JSON.parse(Data);
+  writePage(JSON.parse(data));
+});
 
-toggleHide = () => {
-  mainNav.classList.toggle('mobile-hide')
-  openMenu.classList.toggle('menu-hide')
-  closeMenu.classList.toggle('menu-hide')
-}
-hideSplash = () => {
-  splashPage.classList.add('hide-splash')
-  setTimeout(() => {
-    splashPage.remove()
-  }, 2000)
-}
+// const tagList = [
+//   "Software developer",
+//   "Problem solver",
+//   "Soccer fan"
+// ];
+//
+// const linkList = [
+//   {
+//     title: 'Blog',
+//     url: 'https://medium.com/@seanmcp',
+//     icon: 'fab fa-medium',
+//   },
+//   {
+//     title: 'GitHub',
+//     url: 'https://github.com/seanmcp',
+//     icon: 'fab fa-github',
+//   },
+//   {
+//     title: 'Twitter',
+//     url: 'https://twitter.com/mcpcodes',
+//     icon: 'fab fa-twitter',
+//   },
+//   {
+//     title: 'LinkedIn',
+//     url: 'https://linkedin.com/in/seanmcp',
+//     icon: 'fab fa-linkedin',
+//   },
+//   {
+//     title: 'Resume',
+//     url: 'https://github.com/seanmcp/resume',
+//     icon: 'fas fa-briefcase',
+//   },
+//   {
+//     title: 'Email',
+//     url: 'mailto:sean@seanmcp.com',
+//     icon: 'fas fa-paper-plane',
+//   },
+// ];
 
-menuButton.addEventListener('click', toggleHide)
-mainNav.addEventListener('click', toggleHide)
-splashButton.addEventListener('click', hideSplash)
+// tagList.forEach(tag => {
+//   const newLi = `<li>${tag}</li>`;
+//   $('header ul').append(newLi);
+// })
 
-// Swipe away splash page
+// linkList.forEach(link => {
+//   const newLi = `
+//     <li>
+//       <i class="${link.icon} fa-fw""></i>
+//       <a href=${link.url} alt=${link.title}>${link.title}</a>
+//     </li>
+//   `;
+//   $('footer ul').append(newLi);
+// })
 
-let xDown = null
-let yDown = null
-
-handleTouchStart = (e) => {
-  xDown = e.touches[0].clientX
-  yDown = e.touches[0].clientY
-}
-
-handleTouchMove = (e) => {
-  if (!xDown || !yDown) {
-      return
-  }
-
-  let xUp = e.touches[0].clientX
-  let yUp = e.touches[0].clientY
-
-  let xDiff = xDown - xUp
-  let yDiff = yDown - yUp
-
-  if (Math.abs(xDiff) > Math.abs(yDiff)) {
-    if (xDiff <= 0) {
-      hideSplash()
+const writePage = data => {
+  const wrapper = document.createElement('div');
+  wrapper.id = "wrapper";
+  $('body').prepend(wrapper);
+  for (const element in data) {
+    const temp = document.createElement(element);
+    if (element !== 'main') {
+      const ul = document.createElement('ul');
+      if (element === 'header') {
+        const heading = document.createElement('h1');
+        heading.append(data[element].title);
+        temp.append(heading);
+      }
+      temp.append(ul);
+    } else {
+      writeParagraphs(temp, data[element].content);
     }
+    $('#wrapper').append(temp);
   }
-  xDown = null
-  yDown = null
+  writeTags(data.header.tagList);
+  writeLinks(data.footer.linkList);
 }
 
-document.addEventListener('touchstart', handleTouchStart, false)
-document.addEventListener('touchmove', handleTouchMove, false)
+const writeTags = tagList => {
+  tagList.forEach(tag => {
+    const newLi = `<li>${tag}</li>`;
+    $('header ul').append(newLi);
+  });
+}
 
-// Scroll to anchors
+const writeLinks = linkList => {
+  linkList.forEach(link => {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    const i = document.createElement('i');
+    const span = document.createElement('span');
+    a.href = link.url;
+    a.alt = link.text;
+    a.title = link.text;
+    const classList = link.icon.split(' ');
+    classList.forEach(item => i.classList.add(item));
+    i.classList.add('fa-fw');
+    a.append(i);
+    span.append(link.text);
+    a.append(span);
+    li.append(a);
+    $('footer ul').append(li);
+  });
+}
 
-$(document).ready(function(){
-  $('a').on('click', function(event) {
-    if (this.hash !== '') {
-      event.preventDefault()
-      let hash = this.hash
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 600, function(){
-        window.location.hash = hash
-      })
-    }
-  })
-})
+const writeParagraphs = (container, contentList) => {
+  contentList.forEach(paragraph => {
+    const p = document.createElement('p');
+    p.append(paragraph);
+    container.append(p);
+  });
+}
