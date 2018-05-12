@@ -38,8 +38,9 @@ const writeNavOptions = (parentElement) => {
 
         anchor.href = option.target;
         anchor.addEventListener('click', () => {
-            parentElement.childNodes.forEach(child => child.removeAttribute('class'));
-            anchor.classList.add('active');
+            parentElement.querySelectorAll('a')
+                .forEach(child => child.removeAttribute('class'));
+            anchor.classList.add('active', option.target.slice(1));
         });
 
         li.appendChild(anchor);

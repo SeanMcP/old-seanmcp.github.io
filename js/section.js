@@ -4,7 +4,7 @@ const writeSection = (parentElement) => {
     }
 
     const location = window.location.hash.slice(1);
-    const { heading, tagline, content, image } = copy[location];
+    const { heading, tagline, content, image } = copy[location || 'home'];
 
     const section = document.createElement('section');
 

@@ -8,24 +8,28 @@ body {
     font-weight: 300;
 }
 
+main, nav li, nav a {
+    transition: all 0.2s ease-in-out;
+}
+
 main {
     height: 100vh;
     width: 100%;
 }
 
-main.home {
+.home {
     background: var(--nord15);
 }
 
-main.about {
+.about {
     background: var(--nord12);
 }
 
-main.work {
+.work {
     background: var(--nord13);
 }
 
-main.contact {
+.contact {
     background: var(--nord14);
 }
 
@@ -39,6 +43,7 @@ nav {
 nav ul {
     align-items: center;
     background: var(--nord0);
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.25);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     list-style: none;
@@ -58,4 +63,13 @@ nav a {
 
 nav a:hover {
     color: var(--nord8);
+}
+
+section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.active {
+    pointer-events: none;
 }

@@ -10,12 +10,18 @@ const hash = window.location.hash;
 
 // Site building
 
-main.classList.add(hash.slice(1));
-
 writeSection(main);
 writeNavOptions(nav);
 
-document.querySelector(`a[href='${hash}']`).classList.add('active');
+if (hash.length) {
+    const slice = hash.slice(1);
+    main.classList.add(slice);
+    document.querySelector(`a[href='${hash}']`).classList.add('active', slice);
+} else {
+    main.classList.add('home');
+    document.querySelector(`a[href='#home']`).classList.add('active', 'home');
+}
+
 
 window.onhashchange = () => {
     writeSection(main);
