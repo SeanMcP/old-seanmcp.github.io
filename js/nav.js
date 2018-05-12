@@ -2,39 +2,39 @@ const navOptions = [
     {
         text: 'Home',
         icon: 'home',
-        target: '/'
+        target: '#home'
     },
     {
         text: 'About',
         icon: 'book',
-        target: '/about'
+        target: '#about'
     },
     {
         text: 'Work',
         icon: 'briefcase',
-        target: '/work'
+        target: '#work'
     },
     {
         text: 'Contact',
         icon: 'paper-plane',
-        target: '/contact'
+        target: '#contact'
     },
 ];
 
 const writeNavOptions = (parentElement) => {
     navOptions.forEach(option => {
-        const button = document.createElement('button');
-        button.classList.add('option');
+        const anchor = document.createElement('a');
+        anchor.classList.add('option');
 
         const icon = document.createElement('i');
-        icon.classList.add('fas', `fa-${option.icon}`, 'fa-lg');
-        button.appendChild(icon);
+        icon.classList.add('fas', `fa-${option.icon}`, 'fa-2x');
+        anchor.appendChild(icon);
 
         const title = document.createElement('div');
         title.textContent = option.text;
-        button.appendChild(title);
+        anchor.appendChild(title);
 
-        button.addEventListener('click', () => console.log(option.target));
-        parentElement.appendChild(button);
+        anchor.href = option.target;
+        parentElement.appendChild(anchor);
     })
-}
+};
