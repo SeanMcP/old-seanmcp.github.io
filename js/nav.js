@@ -22,7 +22,10 @@ const navOptions = [
 ];
 
 const writeNavOptions = (parentElement) => {
+    const ul = document.createElement('ul');
+
     navOptions.forEach(option => {
+        const li = document.createElement('li');
         const anchor = document.createElement('a');
 
         const icon = document.createElement('i');
@@ -38,7 +41,10 @@ const writeNavOptions = (parentElement) => {
             parentElement.childNodes.forEach(child => child.removeAttribute('class'));
             anchor.classList.add('active');
         });
-        
-        parentElement.appendChild(anchor);
-    })
+
+        li.appendChild(anchor);
+        ul.appendChild(li);
+    });
+
+    parentElement.appendChild(ul);
 };

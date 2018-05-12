@@ -1,3 +1,4 @@
+@import './reset.css';
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i');
 @import './nord.css';
 
@@ -7,8 +8,13 @@ body {
     font-weight: 300;
 }
 
+main {
+    height: 100vh;
+    width: 100%;
+}
+
 main.home {
-    background: var(--nord11);
+    background: var(--nord15);
 }
 
 main.about {
@@ -21,4 +27,35 @@ main.work {
 
 main.contact {
     background: var(--nord14);
+}
+
+nav {
+    bottom: 0;
+    color: var(--nord4);
+    width: 100%;
+    position: fixed;
+}
+
+nav ul {
+    align-items: center;
+    background: var(--nord0);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    list-style: none;
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 0;
+}
+
+nav a {
+    align-items: center;
+    color: var(--nord4);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--nord8);
 }
