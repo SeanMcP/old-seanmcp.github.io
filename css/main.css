@@ -5,3 +5,19 @@ body {
     font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
     font-weight: 300;
 }
+
+main.home {
+    background: lightpink;
+}
+
+main.about {
+    background: lightblue;
+}
+
+main.work {
+    background: lightgoldenrodyellow;
+}
+
+main.contact {
+    background: lightgreen;
+}

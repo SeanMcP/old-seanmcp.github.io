@@ -24,7 +24,6 @@ const navOptions = [
 const writeNavOptions = (parentElement) => {
     navOptions.forEach(option => {
         const anchor = document.createElement('a');
-        anchor.classList.add('option');
 
         const icon = document.createElement('i');
         icon.classList.add('fas', `fa-${option.icon}`, 'fa-2x');
@@ -35,6 +34,11 @@ const writeNavOptions = (parentElement) => {
         anchor.appendChild(title);
 
         anchor.href = option.target;
+        anchor.addEventListener('click', () => {
+            parentElement.childNodes.forEach(child => child.removeAttribute('class'));
+            anchor.classList.add('active');
+        });
+        
         parentElement.appendChild(anchor);
     })
 };
