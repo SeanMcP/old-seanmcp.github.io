@@ -7,20 +7,41 @@ const writeSection = (parentElement) => {
     const { heading, tagline, content, image } = copy[location || 'home'];
 
     const section = document.createElement('section');
+    const article = document.createElement('article');
 
     const h1 = document.createElement('h1');
     h1.textContent = heading;
-    section.appendChild(h1);
+    article.appendChild(h1);
 
     const h2 = document.createElement('h2');
     h2.textContent = tagline;
-    section.appendChild(h2);
+    article.appendChild(h2);
 
     content.forEach(paragraph => {
         const p = document.createElement('p');
         p.textContent = paragraph;
-        section.appendChild(p);
+        article.appendChild(p);
     });
+
+    section.appendChild(article);
+
+    if (image.source) {
+        const figure = document.createElement('figure');
+        const img = document.createElement('img');
+        img.src = image.source;
+        img.alt = image.caption;
+        img.style.height = `${img.height}px`;
+        img.style.width = `${img.width}px`;
+        console.log(img.width);
+        console.log(img.height);
+        figure.appendChild(img);
+
+        const caption = document.createElement('figcaption');
+        caption.textContent = image.caption;
+        figure.appendChild(caption);
+
+        section.appendChild(figure);
+    }
 
     parentElement.appendChild(section);
 };

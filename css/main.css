@@ -9,6 +9,7 @@ main {
 
 main h1, main h2 {
     font-family: 'Roboto Slab';
+    font-weight: 100;
 }
 
 main h1 {
@@ -28,15 +29,30 @@ main h3 {
 
 section {
     animation: fade-in var(--time) ease-in-out;
+    display: flex;
     max-width: 800px;
     margin: 2rem 2rem 9rem;
 }
 
-section p {
+article p {
     letter-spacing: 0.05rem;
     line-height: 2rem;
 }
 
-section p:not(:last-of-type) {
+article p:not(:last-of-type) {
     margin-bottom: 0.5rem;
+}
+
+figure {
+    margin-left: 1rem;
+}
+
+img {
+    background: var(--nord4);
+}
+
+figcaption {
+    font-family: 'Roboto Slab';
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
 }
