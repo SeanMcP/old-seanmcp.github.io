@@ -29,10 +29,14 @@ const writeMarkdown = () => {
                 throw Error
             }
         })
-        .then(res => main.innerHTML = marked(res))
-        .catch(() => main.innerHTML = marked(unknown))
-
-    main.style.opacity = 1
+        .then(res => {
+            main.innerHTML = marked(res)
+            main.style.opacity = 1
+        })
+        .catch(() => {
+            main.innerHTML = marked(unknown)
+            main.style.opacity = 1
+        })
 }
 
 const setActiveNav = () => {
