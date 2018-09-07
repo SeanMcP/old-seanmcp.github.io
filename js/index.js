@@ -1,9 +1,13 @@
 // HTML elements
 
-const body = document.querySelector('body');
-const root = document.getElementById('root');
-const main = document.querySelector('main');
-const nav = document.querySelector('nav');
+const body = document.querySelector('body')
+const root = document.getElementById('root')
+
+const main = document.createElement('main')
+const nav = document.createElement('nav')
+
+root.appendChild(main)
+root.appendChild(nav)
 
 // Variables
 
@@ -19,24 +23,23 @@ const writeMarkdown = () => {
         .then(res => main.innerHTML = marked(res))
 }
 
-writeMarkdown(hash);
-
-// writeSection(main);
-writeNavOptions(nav);
+writeMarkdown(hash)
+writeNavOptions(nav)
 
 // Set active button on load
 if (hash.length) {
-    body.classList.add(hash);
-    document.querySelector(`a[href='#${hash}']`).classList.add('active', hash);
+    body.classList.add(hash)
+    document.querySelector(`a[href='#${hash}']`)
+        .classList.add('active', hash)
 } else {
-    body.classList.add('home');
-    document.querySelector(`a[href='#home']`).classList.add('active', 'home');
+    body.classList.add('home')
+    document.querySelector(`a[href='#home']`)
+        .classList.add('active', 'home')
 }
 
 
 window.onhashchange = () => {
-    writeMarkdown();
-    // writeSection(main);
-    body.removeAttribute('class');
-    body.classList.add(window.location.hash.slice(1));
-};
+    writeMarkdown()
+    body.removeAttribute('class')
+    body.classList.add(getHash())
+}
