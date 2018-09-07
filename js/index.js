@@ -11,6 +11,8 @@ root.appendChild(nav)
 
 // Variables
 
+const unknown = '# Uh oh! Something went wrong\n\nThere doesn\'t seem to be a page at this location. [Go back to home](#home)?'
+
 const getHash = () => window.location.hash.slice(1)
 const hash = getHash()
 
@@ -18,28 +20,42 @@ const hash = getHash()
 
 const writeMarkdown = () => {
     const hash = getHash()
+    main.style.opacity = 0
     fetch(`../md/${hash ? hash : 'home'}.md`)
-        .then(res => res.text())
+        .then(res => {
+            if (res.ok) {
+                return res.text()
+            } else {
+                throw Error
+            }
+        })
         .then(res => main.innerHTML = marked(res))
+        .catch(() => main.innerHTML = marked(unknown))
+
+    main.style.opacity = 1
 }
 
-writeMarkdown(hash)
+const setActiveNav = () => {
+    const hash = getHash()
+    if (hash.length) {
+        body.classList.add(hash)
+        const link = document.querySelector(`a[href='#${hash}']`)
+        if (link) link.classList.add('active', hash)
+    } else {
+        body.classList.add('home')
+        document.querySelector(`a[href='#home']`)
+            .classList.add('active', 'home')
+    }
+}
+
+writeMarkdown()
 writeNavOptions(nav)
-
-// Set active button on load
-if (hash.length) {
-    body.classList.add(hash)
-    document.querySelector(`a[href='#${hash}']`)
-        .classList.add('active', hash)
-} else {
-    body.classList.add('home')
-    document.querySelector(`a[href='#home']`)
-        .classList.add('active', 'home')
-}
+setActiveNav()
 
 
 window.onhashchange = () => {
     writeMarkdown()
+    setActiveNav()
     body.removeAttribute('class')
     body.classList.add(getHash())
 }

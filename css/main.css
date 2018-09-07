@@ -1,10 +1,17 @@
 /* main.css */
 
 main {
-    /* color: white; */
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
+    display: grid;
+    grid-gap: 1rem;
+    margin: 1rem auto;
+    max-width: 600px;
+    transition: all var(--time) ease-in-out;
+}
+
+@media screen and (max-width: 640px) {
+    main {
+        margin: 1rem;
+    }
 }
 
 main h1, main h2 {
@@ -19,40 +26,4 @@ main h1 {
 main h2 {
     font-size: 2rem;
     font-style: italic;
-    margin: 1rem 0;
-}
-
-main h3 {
-    font-weight: 700;
-    font-size: 1.5rem;
-}
-
-section {
-    animation: fade-in var(--time) ease-in-out;
-    display: flex;
-    max-width: 800px;
-    margin: 2rem 2rem 9rem;
-}
-
-article p {
-    letter-spacing: 0.05rem;
-    line-height: 2rem;
-}
-
-article p:not(:last-of-type) {
-    margin-bottom: 0.5rem;
-}
-
-figure {
-    margin-left: 1rem;
-}
-
-img {
-    background: var(--nord4);
-}
-
-figcaption {
-    font-family: 'Roboto Slab';
-    font-size: 0.75rem;
-    margin-top: 0.5rem;
 }
