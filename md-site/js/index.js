@@ -18,6 +18,26 @@ const hash = getHash()
 
 // Site building
 
+const nodifyString = (htmlString) => {
+    const byLine = htmlString.split('\n')
+
+    return byLine.reduce((acc, line) => {
+        if (!line.length) return acc
+
+        const tagMatch = line.match(/\<(\w+)(?:\s*|\>)?/g)[0]
+        const tag = tagMatch.slice(1, tagMatch.length - 1)
+
+        const textMatch = line.match(/\>(.*?)\</g)[0]
+        const text = textMatch.slice(1, textMatch.length - 1)
+
+        const element = document.createElement(tag)
+        const textNode = document.createTextNode(text)
+        element.appendChild(textNode)
+
+        return acc.concat(element)
+    }, [])
+}
+
 const writeMarkdown = () => {
     const hash = getHash()
     main.style.opacity = 0
@@ -30,6 +50,12 @@ const writeMarkdown = () => {
             }
         })
         .then(res => {
+            // const parser = new DOMParser()
+            // const html = parser.parseFromString(marked(res), 'text/html')
+            // console.log(html.firstChild.lastChild)
+            console.log(nodifyString(marked(res)))
+            console.log(marked(res))
+            // console.log(typeof marked(res))
             main.innerHTML = marked(res)
             main.style.opacity = 1
         })
