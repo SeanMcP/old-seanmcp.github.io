@@ -36,6 +36,7 @@ socials.forEach(function (platform) {
     var icon = document.createElement('i')
     icon.classList.add(
         'fab',
+        'fa-lg',
         platform.icon,
         platform.name.toLowerCase(),
         'social-icon'
