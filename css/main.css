@@ -1,3 +1,5 @@
+@import './reset.css';
+
 body {
     align-items: center;
     background: linear-gradient(#ccc, #999);
