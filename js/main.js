@@ -1,15 +1,9 @@
 var siteContainer = document.getElementById('site')
 
-var socials = [
-    {
+var socials = [{
         icon: 'fa-github',
         link: 'https://github.com/seanmcp',
         name: 'GitHub'
-    },
-    {
-        icon: 'fa-linkedin-in',
-        link: 'https://linkedin.com/in/seanmcp',
-        name: 'LinkedIn'
     },
     {
         icon: 'fa-medium-m',
@@ -20,13 +14,18 @@ var socials = [
         icon: 'fa-twitter',
         link: 'https://twitter.com/mcpcodes',
         name: 'Twitter'
+    },
+    {
+        icon: 'fa-linkedin-in',
+        link: 'https://linkedin.com/in/seanmcp',
+        name: 'LinkedIn'
     }
 ]
 
 var socialsContainer = document.createElement('footer')
 siteContainer.appendChild(socialsContainer)
 
-socials.forEach(function(platform) {
+socials.forEach(function (platform) {
     var anchor = document.createElement('a')
     anchor.target = '_blank'
     anchor.rel = 'noopener noreferrer'
