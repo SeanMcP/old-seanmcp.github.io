@@ -23,7 +23,8 @@ var socials = [
     }
 ]
 
-var socialsContainer = siteContainer.querySelector('footer')
+var socialsContainer = document.createElement('footer')
+siteContainer.appendChild(socialsContainer)
 
 socials.forEach(function(platform) {
     var anchor = document.createElement('a')
