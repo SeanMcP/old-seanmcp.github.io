@@ -1,47 +1,57 @@
 var siteContainer = document.getElementById('site')
 
-var socials = [{
+var links = [{
+        href: 'https://github.com/seanmcp',
         icon: 'fa-github',
-        link: 'https://github.com/seanmcp',
+        isBrand: true,
         name: 'GitHub'
     },
     {
+        href: 'https://medium.com/@seanmcp',
         icon: 'fa-medium-m',
-        link: 'https://medium.com/@seanmcp',
+        isBrand: true,
         name: 'Medium'
     },
     {
+        href: 'https://twitter.com/mcpcodes',
         icon: 'fa-twitter',
-        link: 'https://twitter.com/mcpcodes',
+        isBrand: true,
         name: 'Twitter'
     },
     {
+        href: 'https://linkedin.com/in/seanmcp',
         icon: 'fa-linkedin-in',
-        link: 'https://linkedin.com/in/seanmcp',
+        isBrand: true,
         name: 'LinkedIn'
+    },
+    {
+        href: 'mailto:sean@seanmcp.com',
+        icon: 'fa-paper-plane',
+        name: 'email'
     }
 ]
 
-var socialsContainer = document.createElement('footer')
-siteContainer.appendChild(socialsContainer)
+var linksContainer = document.createElement('footer')
+siteContainer.appendChild(linksContainer)
 
-socials.forEach(function (platform) {
+links.forEach(function (link) {
     var anchor = document.createElement('a')
     anchor.target = '_blank'
     anchor.rel = 'noopener noreferrer'
-    anchor.title = `External link to my ${platform.name} account`
-    anchor.href = platform.link
-    anchor.classList.add('social-link')
+    anchor.title = `External link to ${link.name}`
+    anchor.href = link.href
+    anchor.classList.add(
+        'footer-link',
+        link.name.toLowerCase()
+    )
 
     var icon = document.createElement('i')
     icon.classList.add(
-        'fab',
+        link.isBrand ? 'fab' : 'fas',
+        link.icon,
         'fa-lg',
-        platform.icon,
-        platform.name.toLowerCase(),
-        'social-icon'
     )
 
     anchor.appendChild(icon)
-    socialsContainer.appendChild(anchor)
+    linksContainer.appendChild(anchor)
 })

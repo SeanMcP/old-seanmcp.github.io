@@ -35,7 +35,7 @@ h1 {
     display: flex;
 }
 
-#site .social-link {
+#site .footer-link {
     align-items: center;
     background: #666;
     color: white;
@@ -47,6 +47,6 @@ h1 {
     transition: background 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-#site .social-link:hover {
+#site .footer-link:hover {
     background: #d700bf;
 }
