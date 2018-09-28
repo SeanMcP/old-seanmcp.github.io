@@ -37,7 +37,8 @@ p:not(:last-child) {
     width: 600px;
 }
 
-#site header, #site main {
+#site header,
+#site main {
     padding: 2rem;
 }
 
@@ -101,4 +102,24 @@ p:not(:last-child) {
 
 #site .footer-link:hover {
     background: var(--color-pop);
+}
+
+#site .footer-link.email:hover {
+    background: #DC4E41
+}
+
+#site .footer-link.github:hover {
+    background: #24292E
+}
+
+#site .footer-link.linkedin:hover {
+    background: #0073b1
+}
+
+#site .footer-link.medium:hover {
+    background: #26A87C
+}
+
+#site .footer-link.twitter:hover {
+    background: #22A1F2
 }
