@@ -8,34 +8,36 @@ import Layout from '../components/Layout';
 import '../css/index.css';
 
 export default function Index(props) {
-  const { data } = props;
-  const { edges: posts } = data.allMarkdownRemark;
-  return (
-    <Layout {...props}>
-      <div className="blog-posts">
-        {posts
-          .filter(post => post.node.frontmatter.title.length > 0)
-          .map(({ node: post }) => {
-            return (
-              <div className="blog-post-preview" key={post.id}>
-                <h1 className="title">
-                  <GatsbyLink to={post.frontmatter.path}>
-                    {post.frontmatter.title}
-                  </GatsbyLink>
-                </h1>
-                <h2 className="date">
-                  {post.frontmatter.date}
-                </h2>
-                <p>
-                  {post.excerpt}
-                </p>
-                <Link to={post.frontmatter.path}>Read more</Link>
-              </div>
-            );
-          })}
-      </div>
-    </Layout>
-  );
+    const { data } = props;
+    const { edges: posts } = data.allMarkdownRemark;
+    return (
+        <Layout {...props}>
+            <ul className="blog-posts">
+                {posts
+                    .filter(post => post.node.frontmatter.title.length > 0)
+                    .map(({ node: post }) => {
+                        return (
+                            <li>
+                                <article className="preview" key={post.id}>
+                                    <h1 className="title">
+                                        <GatsbyLink to={post.frontmatter.path}>
+                                            {post.frontmatter.title}
+                                        </GatsbyLink>
+                                    </h1>
+                                    <h2 className="date">
+                                        <time>{post.frontmatter.date}</time>
+                                    </h2>
+                                    <p>
+                                        {post.excerpt}
+                                    </p>
+                                    <Link to={post.frontmatter.path}>Read more</Link>
+                                </article>
+                            </li>
+                        );
+                    })}
+            </ul>
+        </Layout>
+    );
 }
 
 export const pageQuery = graphql`
