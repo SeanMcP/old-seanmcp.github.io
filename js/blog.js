@@ -33,7 +33,7 @@ function renderPost(markdown) {
 function createCloseArticleButton() {
     var button = document.createElement('button')
     button.type = 'button'
-    button.textContent = 'Close'
+    button.textContent = '‹ Back'
     button.onclick = closeArticle
     return button
 }

@@ -1,5 +1,6 @@
 #article-container {
     align-items: center;
+    animation: fade-in 200ms ease-in-out;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -16,6 +17,15 @@
     width: 100vw;
     top: 0;
     z-index: 1;
+}
+
+#article-container button {
+    background: transparent;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    border: 0;
+    padding: 0;
 }
 
 article {
