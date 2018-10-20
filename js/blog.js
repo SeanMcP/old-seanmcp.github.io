@@ -15,19 +15,32 @@ function goFetch(url) {
 
 function renderPost(markdown) {
     var htmlString = marked(markdown)
-    var main = document.createElement('main')
-    main.id = 'article-container'
+    var section = document.createElement('section')
+    section.id = 'article-container'
+
     var overlay = document.createElement('div')
     overlay.classList.add('overlay')
     overlay.onclick = closeArticle
+
     var article = document.createElement('article')
-    article.appendChild(createCloseArticleButton())
+
+    var header = document.createElement('header')
+    header.appendChild(createCloseArticleButton())
+    article.appendChild(header)
+
     nodifyString(htmlString).forEach(function (node) {
         article.appendChild(node)
     })
-    main.appendChild(article)
-    main.appendChild(overlay)
-    document.body.appendChild(main)
+
+    var footer = document.createElement('footer')
+    var ps = document.createElement('p')
+    ps.textContent = '(SDG)'
+    footer.appendChild(ps)
+    article.appendChild(footer)
+
+    section.appendChild(article)
+    section.appendChild(overlay)
+    document.body.appendChild(section)
 }
 
 function createCloseArticleButton() {
