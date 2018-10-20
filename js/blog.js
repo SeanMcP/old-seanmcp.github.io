@@ -1,7 +1,5 @@
 // Declare
 
-var hash = location.hash.slice(1)
-
 function goFetch(url) {
     fetch(`./md/${url}.md`)
         .then(function (res) {
@@ -17,39 +15,47 @@ function goFetch(url) {
 
 function renderPost(markdown) {
     var htmlString = marked(markdown)
+    var main = document.createElement('main')
+    main.id = 'article-container'
+    var overlay = document.createElement('div')
+    overlay.classList.add('overlay')
+    overlay.onclick = closeArticle
     var article = document.createElement('article')
     article.appendChild(createCloseArticleButton())
     nodifyString(htmlString).forEach(function (node) {
         article.appendChild(node)
     })
-    document.body.appendChild(article)
+    main.appendChild(article)
+    main.appendChild(overlay)
+    document.body.appendChild(main)
 }
 
 function createCloseArticleButton() {
     var button = document.createElement('button')
     button.type = 'button'
-    button.onclick = closeArticle
     button.textContent = 'Close'
+    button.onclick = closeArticle
     return button
 }
 
 function closeArticle() {
-    var article = document.querySelector('article')
-    article.classList.add('exiting')
+    var container = document.getElementById('article-container')
+    container.classList.add('exiting')
     setTimeout(function () {
-        location = '/thoughts'
-    }, 1000)
+        container.parentElement.removeChild(container)
+        location = '#back'
+    }, 200)
+}
+
+function checkHashAndFetch() {
+    var hash = location.hash.slice(1)
+    if (hash && hash !== 'back') {
+        goFetch(hash)
+    }
 }
 
 // On load
 
-if (hash) {
-    goFetch(hash)
-}
+checkHashAndFetch()
 
-window.onhashchange = function () {
-    hash = location.hash.slice(1)
-    if (hash) {
-        goFetch(hash)
-    }
-}
+window.onhashchange = checkHashAndFetch
