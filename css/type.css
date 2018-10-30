@@ -1,14 +1,24 @@
-@import url("https://fonts.googleapis.com/css?family=Work+Sans:600");
+/* @import url("https://fonts.googleapis.com/css?family=Work+Sans:600"); */
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:700|Fira+Sans:400,400i');
 
 :root {
-    --heading-font-family: "Work Sans", sans-serif;
-    --body-font-family: Georgia, serif;
+    --system-fonts: -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+    --heading-font-family: "Fira Mono", var(--system-fonts);
+    --body-font-family: "Fira Sans", var(--system-fonts);
 }
 
 body {
     font-family: var(--body-font-family);
     font-size: 1.25rem;
-    width: 600px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -49,7 +59,7 @@ h6 {
 }
 
 p {
-    font-family: "Georgia";
+    font-family: var(--body-font-family);
     line-height: 150%;
 }
 
