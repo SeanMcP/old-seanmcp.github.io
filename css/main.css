@@ -2,6 +2,10 @@
 @import './animate.css';
 @import './blog.css';
 
+html {
+    background: #f9f9f9;
+}
+
 body {
     margin: 0 auto;
     width: 600px;

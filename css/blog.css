@@ -1,8 +1,4 @@
-article {
-    background: white;
-}
-
 article footer p {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     text-align: right;
 }

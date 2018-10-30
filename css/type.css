@@ -19,6 +19,7 @@
 body {
     font-family: var(--body-font-family);
     font-size: 1.25rem;
+    color: #333;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
