@@ -18,7 +18,10 @@ function renderPost(markdown) {
 
     var article = document.querySelector('article')
 
-    nodifyString(htmlString).forEach(function (node) {
+    var nodes = nodifyString(htmlString)
+    document.title = `${nodes[0].textContent} - ${document.title}`
+
+    nodes.forEach(function(node) {
         article.appendChild(node)
     })
 
@@ -31,7 +34,6 @@ function renderPost(markdown) {
 
 function checkHashAndFetch() {
     var hash = location.hash.slice(1)
-    console.log(hash)
     if (hash && hash !== 'back') {
         goFetch(hash)
     }
