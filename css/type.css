@@ -1,5 +1,5 @@
 /* @import url("https://fonts.googleapis.com/css?family=Work+Sans:600"); */
-@import url('https://fonts.googleapis.com/css?family=Fira+Mono:700|Fira+Sans:400,400i');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,700');
 
 :root {
     --system-fonts: -apple-system,
@@ -12,7 +12,7 @@
     'Open Sans',
     'Helvetica Neue',
     sans-serif;
-    --heading-font-family: "Fira Mono", var(--system-fonts);
+    --heading-font-family: "Fira Sans", var(--system-fonts);
     --body-font-family: "Fira Sans", var(--system-fonts);
 }
 
