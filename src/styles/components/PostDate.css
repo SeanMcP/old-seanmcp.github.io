@@ -1,0 +1,8 @@
+.PostDate {
+    align-items: center;
+    display: flex;
+}
+
+.PostDate__icon {
+    margin-right: 0.5rem;
+}

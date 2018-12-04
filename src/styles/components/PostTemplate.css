@@ -1,0 +1,16 @@
+.PostTemplate__header {
+    border-bottom: 1px solid var(--gray200);
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.PostTemplate__details {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.PostTemplate__details-spacer {
+    margin: 0 0.25rem;
+}

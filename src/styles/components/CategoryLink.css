@@ -1,0 +1,8 @@
+.CategoryLink {
+    align-items: center;
+    display: flex;
+}
+
+.CategoryLink__icon {
+    margin-right: 0.5rem;
+}

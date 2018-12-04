@@ -1,0 +1,8 @@
+.TagLinks {
+    align-items: center;
+    display: flex;
+}
+
+.TagLinks__icon {
+    margin-right: 0.5rem;
+}

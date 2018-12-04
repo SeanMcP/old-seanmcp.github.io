@@ -1,0 +1,13 @@
+/* Modified styles */
+
+.SearchLink--categories {
+    text-transform: capitalize;
+}
+
+.SearchLink--tags:not(:last-child) {
+    margin-right: 0.25rem;
+}
+
+.SearchLink--tags:not(:last-child)::after {
+    content: ','
+}

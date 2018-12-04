@@ -1,0 +1,7 @@
+.PageHeader--centered {
+    text-align: center;
+}
+
+.PageHeader > *:first-child {
+    margin-top: 0;
+}
