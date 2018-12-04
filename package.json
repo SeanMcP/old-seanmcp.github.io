@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Sean McPherson <seanmcp25@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
+    "url": "https://github.com/seanmcp/seanmcp.github.io/issues"
   },
   "dependencies": {
     "gatsby": "^2.0.19",
@@ -36,15 +36,18 @@
     "gh-pages": "^1.2.0",
     "prettier": "^1.14.2"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/seanmcp/seanmcp.github.io#readme",
   "keywords": [
+    "seanmcp",
+    "sean mcpherson",
+    "blog",
     "gatsby"
   ],
   "license": "MIT",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/seanmcp/seanmcp.github.io.git"
   },
   "scripts": {
     "dev": "gatsby develop",

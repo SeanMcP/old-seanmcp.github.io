@@ -1,3 +1,3 @@
-# Gatsby Playground
+# seanmcp.github.io
 
-Learning Gatsby and GraphQL in preparation for launching a personal blog.
+A personal blog powered by Gatsby
