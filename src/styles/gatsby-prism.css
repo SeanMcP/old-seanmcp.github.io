@@ -1,23 +1,214 @@
-.gatsby-highlight code[class*="language-"],
-.gatsby-highlight .gatsby-highlight-code-line {
+/**
+ * prism.js Soft Light theme 
+ * Based on Google's Material color palette
+ * @author Sean McPherson
+ */
+
+ :root {
+    --font-family: Menlo, Monaco, "Roboto Sans", Consolas,
+      "Andale Mono", "Ubuntu Mono", monospace;
+    --background: var(--gray200);
+    --text: var(--gray800);
+    --comment: var(--gray600);
+    --selected-text-background: var(--blue100);
+    --punctuation: var(--gray500);
+    --value: var(--purple400);
+    --string: var(--light-green700);
+    --special-char: var(--punctuation);
+    --special-char-bg: rgba(255, 255, 255, 0.45);
+    --keyword: var(--blue600);
+    --function: var(--pink400);
+    --variable: var(--orange600);
+    --highlighted-line-background: var(--gray100);
+    --line-numbers: var(--punctuation);
+  }
+  
+  code[class*="language-"],
+  pre[class*="language-"] {
+    color: var(--text);
+    background: none;
+    font-family: var(--font-family);
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+  
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+  
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+  
+  pre[class*="language-"]::-moz-selection,
+  pre[class*="language-"] ::-moz-selection,
+  code[class*="language-"]::-moz-selection,
+  code[class*="language-"] ::-moz-selection {
+    background: var(--selected-text-background);
+  }
+  
+  pre[class*="language-"]::selection,
+  pre[class*="language-"] ::selection,
+  code[class*="language-"]::selection,
+  code[class*="language-"] ::selection {
+    background: var(--selected-text-background);
+  }
+  
+  /* Code blocks */
+  pre[class*="language-"] {
+    padding: 1em;
+    margin: 0.5em 0;
+    overflow: auto;
+  }
+  
+  :not(pre) > code[class*="language-"],
+  pre[class*="language-"] {
+    background: var(--background);
+  }
+  
+  /* Inline code */
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em 0.2em;
+    border-radius: 0.3em;
+    white-space: normal;
+  }
+  
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: var(--comment);
+  }
+  
+  .token.punctuation {
+    color: var(--punctuation);
+  }
+  
+  .namespace {
+    opacity: 0.7;
+  }
+  
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.deleted {
+    color: var(--value);
+  }
+  
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.inserted {
+    color: var(--string);
+  }
+  
+  .token.operator,
+  .token.entity,
+  .token.url,
+  .language-css .token.string,
+  .style .token.string {
+    background: var(--special-char-bg);
+    border-radius: 2px;
+    color: var(--special-char);
+  }
+  
+  .token.atrule,
+  .token.attr-value,
+  .token.keyword {
+    color: var(--keyword);
+  }
+  
+  .token.class-name,
+  .token.function {
+    color: var(--function);
+  }
+  
+  .token.regex,
+  .token.important,
+  .token.variable {
+    color: var(--variable);
+  }
+  
+  .token.important,
+  .token.bold {
+    font-weight: bold;
+  }
+  .token.italic {
+    font-style: italic;
+  }
+  
+  .token.entity {
+    cursor: help;
+  }
+  
+  pre.line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+  }
+  
+  pre.line-numbers > code {
+    position: relative;
+  }
+  
+  .line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+  
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .line-numbers-rows > span {
+    pointer-events: none;
     display: block;
-}
-
-.gatsby-highlight span.gatsby-highlight-code-line {
-    background: rgba(255, 255, 255, 0.5);
-}
-
-.gatsby-highlight {
-    /* Same as default Prism theme */
-    background-color: #f5f2f0;
+    counter-increment: linenumber;
+  }
+  
+  .line-numbers-rows > span:before {
+    content: counter(linenumber);
+    color: var(--line-numbers);
+    display: block;
+    padding-right: 0.8em;
+    text-align: right;
+  }
+  
+  .gatsby-highlight code[class*="language-"],
+  .gatsby-highlight .gatsby-highlight-code-line {
+    display: block;
+  }
+  
+  .gatsby-highlight span.gatsby-highlight-code-line {
+    background: var(--highlighted-line-background);
+  }
+  
+  .gatsby-highlight {
+    background-color: var(--background);
     border-radius: 0.3em;
     margin: 0.5em 0;
     padding: 0.5em 1em;
     overflow: auto;
-}
-
-.gatsby-highlight pre[class*="language-"].line-numbers {
+  }
+  
+  .gatsby-highlight pre[class*="language-"].line-numbers {
     padding: 0;
     padding-left: 2.8em;
     overflow: initial;
-}
+  }

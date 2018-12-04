@@ -7,29 +7,23 @@ tags: [one, two]
 published: false
 ---
 
-```js{1,3}{numberLines: true}
+```js{8-12}{numberLines: true}
 // A comment
 
 function hello(name) {
-    return `Hello ${name}!`;
+    return `Hello, I'm ${name}!`;
 }
 
-class Sean extends React.Component {
-    state = {
-        age: 26,
-        favoriteAnimal: 'wolf'
-        isFemale: false,
-        name: 'Sean'
-    }
-    render() {
-        return (
-            <div>Hello there! I'm Sean.</div>
-        );
-    }
-}
+const obj = {
+    boolean: true,
+    function: hello,
+    number: 25,
+    regex: /ab+c/,
+    string: 'Sean'
+};
 ```
 
-This is my first post on my new fake blog! How exciting!
+This is my `first post` on my new fake blog! How exciting!
 
 I'm sure I'll write a lot more interesting things in the future.
 
