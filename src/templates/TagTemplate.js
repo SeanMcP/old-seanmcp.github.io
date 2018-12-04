@@ -9,7 +9,7 @@ import SearchHeader from '../components/common/SearchHeader';
 
 const TagTemplate = props => {
     const siteTitle = get(props, 'data.site.siteMetadata.title');
-    const posts = get(props, 'data.allMarkdownRemark.edges');
+    const posts = get(props, 'data.allMarkdownRemark.edges', []);
     const { tag } = props.pageContext;
     return (
         <Layout location={props.location} title={siteTitle}>
