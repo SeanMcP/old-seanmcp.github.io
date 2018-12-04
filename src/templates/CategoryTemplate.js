@@ -10,10 +10,7 @@ import SearchHeader from '../components/common/SearchHeader';
 const CategoryTemplate = props => {
     const siteTitle = get(props, 'data.site.siteMetadata.title');
     const posts = get(props, 'data.allMarkdownRemark.edges');
-    const {
-        location: { pathname }
-    } = window;
-    const category = pathname.slice(pathname.lastIndexOf('/') + 1);
+    const { category } = props.pageContext;
     return (
         <Layout location={props.location} title={siteTitle}>
             <Helmet title={`Categories | ${siteTitle}`} />
