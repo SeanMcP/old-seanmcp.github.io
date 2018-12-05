@@ -1,3 +1,11 @@
 p {
     line-height: 150%;
 }
+
+li {
+    line-height: 125%;
+}
+
+li:not(:last-of-type) {
+    margin-bottom: 0.5rem;
+}
